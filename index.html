@@ -1,0 +1,4260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="London Sportif – A multi-sports community club based in East London. Football, Cricket, Badminton and Junior Projects. Charity No: 1212734. Join us today." />
+  <meta name="keywords"
+    content="London Sportif, sports club London, football club East London, cricket London, badminton London, junior sports, charity sports club, East End sports" />
+  <meta name="author" content="THE ARJ" />
+  <meta property="og:title" content="London Sportif – The Centre Of Sports" />
+  <meta property="og:description"
+    content="East London's premier multi-sports club. Football, Cricket, Badminton & Junior Projects. Join our #WeAreOneFamily community." />
+  <meta property="og:image"
+    content="https://static.wixstatic.com/media/d01148_05322d11115042fa9678be77dbd0e9cf~mv2.png/v1/fill/w_116,h_116,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/sportif%20logo%202%20copy%20without%20%20%20ribbon.png" />
+  <meta property="og:type" content="website" />
+  <meta name="tiktok:card" content="summary_large_image" />
+  <title>London Sportif – The Centre Of Sports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet" />
+    <!-- External stylesheets loaded below via JS/CDN as needed -->
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+         CSS CUSTOM PROPERTIES
+      ══════════════════════════════════════════════════════ */
+    :root {
+      --black: #0a0a0a;
+      --deep: #111217;
+      --card: #16181f;
+      --border: rgba(255, 255, 255, 0.07);
+      --white: #f5f5f0;
+      --muted: #8a8a8a;
+      --gold: #c9a84c;
+      --gold-light: #e6c97a;
+      --purple: #6b2fa0;
+      --purple-light: #9b59d6;
+      --accent: #c9a84c;
+      --radius: 4px;
+      --nav-h: 80px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── CUSTOM SCROLLBAR ─── */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--black);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ─── PAGE SECTIONS ─── */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         NAVIGATION
+      ══════════════════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      height: 64px;
+      background: rgba(10, 10, 10, 0.98);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-logo-text span:first-child {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+    }
+
+    .nav-logo-text span:last-child {
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .nav-links>li {
+      position: relative;
+    }
+
+    .nav-links>li>a,
+    .nav-links>li>span {
+      display: block;
+      padding: 8px 14px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.25s;
+      white-space: nowrap;
+    }
+
+    .nav-links>li>a:hover,
+    .nav-links>li>span:hover,
+    .nav-links>li>a.active {
+      color: var(--white);
+    }
+
+    .nav-links>li>a.highlight {
+      background: var(--gold);
+      color: var(--black);
+      border-radius: var(--radius);
+      font-weight: 600;
+    }
+
+    .nav-links>li>a.highlight:hover {
+      background: var(--gold-light);
+      color: var(--black);
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 200px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 0;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: all 0.2s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links>li:hover .dropdown,
+    .nav-links>li:focus-within .dropdown {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .dropdown a:hover {
+      color: var(--gold);
+      background: rgba(201, 168, 76, 0.06);
+    }
+
+    /* Hamburger — FIX: correct display logic */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 10, 0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 5vw 30px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+      max-height: calc(100vh - var(--nav-h));
+      overflow-y: auto;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a,
+    .mobile-nav span {
+      display: block;
+      padding: 12px 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav span:hover {
+      color: var(--gold);
+    }
+
+    .mobile-nav a.active {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .mobile-nav .sub {
+      padding-left: 20px;
+      font-size: 0.8rem;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         HERO — FIXED LAYOUT
+      ══════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0d0d14 0%, #1a0e2e 50%, #0d0d14 100%);
+      z-index: 0;
+    }
+
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(107, 47, 160, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 75% 20%, rgba(201, 168, 76, 0.12) 0%, transparent 50%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ─── HERO INNER: flex row on desktop, column on mobile ─── */
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: calc(var(--nav-h) + 40px) 5vw 32px;
+      flex: 1;
+    }
+
+    /* ─── LEFT SIDE ─── */
+    .hero-content {
+      flex: 1;
+      max-width: 560px;
+      min-width: 0;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      margin-bottom: 18px;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold);
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .hero-tag::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 0.92;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      animation: fadeInUp 0.8s 0.15s ease both;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      margin-top: 16px;
+      max-width: 480px;
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      animation: fadeInUp 0.8s 0.3s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      animation: fadeInUp 0.8s 0.45s ease both;
+    }
+
+    /* ─── RIGHT SIDE: sport cards ─── */
+    /* FIX: perspective must be on the PARENT of 3D elements */
+    .hero-cards-wrap {
+      flex-shrink: 0;
+      position: relative;
+      width: 360px;
+      height: 500px;
+      perspective: 1200px;
+      perspective-origin: center center;
+      animation: fadeInUp 0.8s 0.5s ease both;
+    }
+
+    .sport-card {
+      position: absolute;
+      width: 220px;
+      height: 270px;
+      padding: 28px 24px;
+      border-radius: 20px;
+      color: white;
+      /* FIX: transform-style preserve-3d needed for 3D tilt to work */
+      transform-style: preserve-3d;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: transform 0.35s ease, box-shadow 0.3s ease, z-index 0s;
+      cursor: pointer;
+      --x: 50%;
+      --y: 50%;
+      overflow: hidden;
+      /* Ensure backdrop-filter doesn't break stacking */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Light shimmer overlay */
+    .sport-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.18), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sport-card:hover::before {
+      opacity: 1;
+    }
+
+    .sport-card:hover {
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(201, 168, 76, 0.35);
+      z-index: 10 !important;
+    }
+
+    /* Card shimmer stripe */
+    .sport-card::after {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.07) 50%, transparent 60%);
+      transform: skewX(-20deg);
+      animation: shimmer 6s infinite;
+      animation-delay: var(--shimmer-delay, 0s);
+      z-index: 2;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -60%;
+      }
+
+      30%,
+      100% {
+        left: 160%;
+      }
+    }
+
+    /* Card content z-index above pseudo elements */
+    .sport-card-emoji,
+    .sport-card-title,
+    .sport-card-sub,
+    .sport-card-badge {
+      position: relative;
+      z-index: 3;
+    }
+
+    /* Fanned card positions */
+    /* slot 1 — featured Community Programmes card (front of stack) */
+    .sport-card:nth-child(1) {
+      top: 0px;
+      left: 70px;
+      transform: rotate(-5deg);
+      z-index: 5;
+      background: linear-gradient(145deg, #2b1640 0%, #6b2fa0 55%, #4a3208 100%);
+      --shimmer-delay: 0s;
+    }
+
+    .sport-card:nth-child(2) {
+      top: 80px;
+      left: 14px;
+      transform: rotate(-8deg);
+      z-index: 4;
+      background: linear-gradient(145deg, #0f2d52 0%, #1a4a80 60%, #0d2240 100%);
+      --shimmer-delay: 1.5s;
+    }
+
+    .sport-card:nth-child(3) {
+      top: 160px;
+      left: 94px;
+      transform: rotate(3deg);
+      z-index: 3;
+      background: linear-gradient(145deg, #0b2e12 0%, #1a5c28 60%, #082010 100%);
+      --shimmer-delay: 3s;
+    }
+
+    .sport-card:nth-child(4) {
+      top: 240px;
+      left: 40px;
+      transform: rotate(-4deg);
+      z-index: 2;
+      background: linear-gradient(145deg, #3d1a00 0%, #7a3a00 60%, #2d1200 100%);
+      --shimmer-delay: 4.5s;
+    }
+
+    .sport-card:nth-child(5) {
+      top: 320px;
+      left: 110px;
+      transform: rotate(6deg);
+      z-index: 1;
+      background: linear-gradient(145deg, #150d3d 0%, #2e1a7a 60%, #0d0828 100%);
+      --shimmer-delay: 6s;
+    }
+
+    .sport-card-emoji {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .sport-card-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.07em;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+
+    .sport-card-sub {
+      font-size: 0.75rem;
+      opacity: 0.65;
+      line-height: 1.4;
+    }
+
+    .sport-card-badge {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: rgba(201, 168, 76, 0.18);
+      color: var(--gold);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 4px 10px;
+      border-radius: 40px;
+    }
+
+    /* ─── COMMUNITY PROGRAMMES — FLIP CARD ─── */
+    .sport-card-feature {
+      border-color: rgba(201, 168, 76, 0.5);
+      box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.18);
+    }
+
+    .sport-card-flip {
+      padding: 0;
+    }
+
+    .sport-card-flip-inner {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .sport-card-flip:hover .sport-card-flip-inner,
+    .sport-card-flip:focus-within .sport-card-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .sport-card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sport-card-back {
+      transform: rotateY(180deg);
+    }
+
+    .sport-card-back-title {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .sport-card-back-text {
+      font-size: 0.78rem;
+      line-height: 1.55;
+      opacity: 0.9;
+    }
+
+    /* ─── HERO STATS — FIX: part of normal flow, not absolute ─── */
+    .hero-stats {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 40px;
+      padding: 0 5vw 36px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s 0.6s ease both;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      color: var(--gold);
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         BUTTONS
+      ══════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(201, 168, 76, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════════════════
+         SHARED SECTION STYLES
+      ══════════════════════════════════════════════════════ */
+    section {
+      padding: 100px 5vw;
+    }
+
+    .section-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
+
+    .section-title em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 24px 0 40px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         CLUBS SLIDER — FIX: removed duplicate rule
+      ══════════════════════════════════════════════════════ */
+    .clubs-section {
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .clubs-section .inner {
+      padding: 0 5vw;
+      margin-bottom: 48px;
+    }
+
+    .clubs-track {
+      display: flex;
+      gap: 24px;
+      padding: 0 5vw;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 12px;
+    }
+
+    .clubs-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ─── HORIZONTAL TRACK SCROLL BUTTONS ─── */
+    .track-nav {
+      position: relative;
+    }
+
+    .track-scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(10, 10, 10, 0.85);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: background 0.25s, border-color 0.25s, color 0.25s;
+    }
+
+    .track-scroll-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
+
+    .track-scroll-btn.prev {
+      left: 8px;
+    }
+
+    .track-scroll-btn.next {
+      right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .track-scroll-btn {
+        display: none;
+      }
+    }
+
+   .club-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, border-color 0.3s;
+  
+  /* FIXES ADDED HERE */
+  display: flex;
+  flex-direction: column; /* Stacks image and body vertically */
+}
+
+    .club-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
+
+    /* Dark overlay on hover */
+    .club-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      border-radius: 8px;
+    }
+
+    .club-card:hover::after {
+      opacity: 1;
+    }
+
+    .club-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: var(--card);
+  display: block;
+  filter: brightness(0.75);
+  transition: filter 0.3s;
+  flex-shrink: 0; /* Prevents the image aspect ratio from collapsing */
+}
+
+    .club-card:hover .club-card-img {
+      filter: brightness(0.9);
+    }
+
+   .club-card-body {
+  padding: 22px;
+  background: var(--card);
+  
+  /* FIXES ADDED HERE */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Forces the body to fill the remaining height of the card evenly */
+}
+
+    .club-card-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .club-card h3 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+.club-card p {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  
+  /* FIX SPECIFICALLY FOR BUTTON ALIGNMENT */
+  flex-grow: 1; /* Pushes the 'Join Club' button flawlessly to the bottom of all cards */
+}
+
+    .club-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .club-card-btn:hover {
+      gap: 14px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         ABOUT SECTION
+      ══════════════════════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--card) 0%, #1e1430 100%);
+      display: block;
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--gold);
+      color: var(--black);
+      padding: 20px 24px;
+      border-radius: 4px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .about-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .chip {
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════════════════
+         CLUB GALLERY
+      ══════════════════════════════════════════════════════ */
+    .gallery-section {
+      background: var(--deep);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      grid-auto-flow: dense;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid var(--border);
+    }
+
+    .gallery-item.large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.78);
+      transition: transform 0.5s ease, filter 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.95);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      transform: translateY(8px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+      }
+
+      .gallery-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         REGISTRATION POSTER
+      ══════════════════════════════════════════════════════ */
+    .poster-section {
+      background: var(--deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster-section::before {
+      content: "";
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(107, 47, 160, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .poster-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .poster-frame {
+      position: relative;
+    }
+
+    .poster-frame a {
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 60px rgba(201, 168, 76, 0.15);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .poster-frame a:hover {
+      box-shadow: 0 0 80px rgba(201, 168, 76, 0.3);
+      transform: scale(1.02);
+    }
+
+    .poster-frame img {
+      width: 100%;
+      display: block;
+      background: var(--card);
+      min-height: 400px;
+    }
+
+    .poster-frame-label {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      padding: 8px 24px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    .season-badge {
+      display: inline-block;
+      background: var(--purple);
+      color: var(--white);
+      padding: 4px 14px;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         MATCHES
+      ══════════════════════════════════════════════════════ */
+    .matches-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .match-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 32px;
+      background: var(--card);
+      border-left: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .match-row:hover {
+      border-left-color: var(--gold);
+      background: #1c1e28;
+    }
+
+    .match-team {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .match-team.right {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .match-team-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: var(--deep);
+      flex-shrink: 0;
+      padding: 4px;
+    }
+
+    .match-team-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .match-score {
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .match-score .score {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+    }
+
+    .match-score .date {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .match-sport-badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    .badge-football {
+      background: rgba(41, 128, 185, 0.2);
+      color: #5dade2;
+    }
+
+    .badge-cricket {
+      background: rgba(39, 174, 96, 0.2);
+      color: #58d68d;
+    }
+
+    .badge-badminton {
+      background: rgba(230, 126, 34, 0.2);
+      color: #f39c12;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         ACHIEVEMENTS
+      ══════════════════════════════════════════════════════ */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .achievement-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .achievement-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .achievement-card::before {
+      content: attr(data-year);
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3.5rem;
+      color: rgba(255, 255, 255, 0.04);
+      line-height: 1;
+    }
+
+    .ach-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(201, 168, 76, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .achievement-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .achievement-card p {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════════════════
+         BOARD OF DIRECTORS
+      ══════════════════════════════════════════════════════ */
+    .directors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .director-card {
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .director-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+   .director-avatar {
+  width: 120px;       /* Increased from 90px for better visibility */
+  height: 120px;      /* Increased from 90px for better visibility */
+  border-radius: 50%;
+  object-fit: cover;  /* Keeps the image aspect-ratio intact */
+  
+  /* FIXES ADDED HERE */
+  object-position: center top; /* Focuses the crop on the face/head area instead of the chest */
+  
+  margin: 0 auto 20px;
+  display: block;
+  background: linear-gradient(135deg, var(--purple) 0%, #1a0e2e 100%);
+  border: 2px solid var(--gold);
+}
+    .director-name {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .director-role {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         SOCIAL SECTION
+      ══════════════════════════════════════════════════════ */
+    .social-section {
+      background: var(--deep);
+    }
+
+    .social-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .social-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .social-tab {
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .social-tab.active,
+    .social-tab:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .social-live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 59, 48, 0.15);
+      color: #ff3b30;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .social-live-badge::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: #ff3b30;
+      border-radius: 50%;
+      animation: pulse 1s infinite;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         PARTNERS
+      ══════════════════════════════════════════════════════ */
+    .partners-section {
+      padding: 80px 5vw;
+      overflow: hidden;
+    }
+
+    .partners-track-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .partners-track-wrap::before,
+    .partners-track-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .partners-track-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--black), transparent);
+    }
+
+    .partners-track-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, var(--black), transparent);
+    }
+
+    .partners-track {
+      display: flex;
+      gap: 64px;
+      align-items: center;
+      animation: scroll-left 25s linear infinite;
+      width: max-content;
+    }
+
+    .partners-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .partner-logo {
+      height: 60px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      filter: brightness(0.6) grayscale(0.5);
+      transition: filter 0.3s;
+    }
+
+    .partner-logo:hover {
+      filter: brightness(1) grayscale(0);
+    }
+
+    /* ═══════════════════════════════════════════════════
+         CONTACT
+      ══════════════════════════════════════════════════════ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+    }
+
+    .contact-info h3 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 32px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .contact-detail-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(201, 168, 76, 0.1);
+      border-radius: 8px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+    }
+
+    .contact-detail-text {
+      font-size: 0.88rem;
+    }
+
+    .contact-detail-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .contact-social-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: var(--muted);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-field select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .form-field select option {
+      background: var(--card);
+    }
+
+    /* ═══════════════════════════════════════════════════
+         SPORT PAGES — FIX: cricket hero no longer has fixed-height wrapper
+      ══════════════════════════════════════════════════════ */
+    .sport-hero {
+      min-height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: calc(var(--nav-h) + 60px) 5vw 80px;
+      overflow: hidden;
+    }
+
+    .sport-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #0d1420 0%, #091a0d 100%);
+    }
+
+    .sport-hero-bg.cricket {
+      background: linear-gradient(160deg, #0d1a0d 0%, #0a1a08 100%);
+    }
+
+    .sport-hero-bg.badminton {
+      background: linear-gradient(160deg, #1a0d0d 0%, #2d1200 100%);
+    }
+
+    .sport-hero-bg.junior {
+      background: linear-gradient(160deg, #0d0d2a 0%, #0a0820 100%);
+    }
+
+    .sport-hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+    }
+
+    /* FIX: sport bg images — consistent across all pages */
+    .sport-hero-bg img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+    }
+
+    .sport-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .sport-hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 1;
+      letter-spacing: 0.05em;
+    }
+
+    .sport-hero p {
+      max-width: 560px;
+      color: var(--muted);
+      margin-top: 16px;
+      font-size: 1rem;
+    }
+
+    .sport-content {
+      padding: 80px 5vw;
+    }
+
+    /* ─── REGISTRATION FORM ─── */
+    .reg-form-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 60px;
+    }
+
+    .reg-form-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .reg-form-sub {
+      color: var(--muted);
+      margin-bottom: 40px;
+      font-size: 0.9rem;
+    }
+
+    .reg-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .reg-form-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-top: 12px;
+    }
+
+    .form-three {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+         FOOTER
+      ══════════════════════════════════════════════════════ */
+    footer {
+      background: var(--deep);
+      border-top: 1px solid var(--border);
+      padding: 80px 5vw 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 260px;
+      line-height: 1.7;
+    }
+
+    .footer-charity {
+      margin-top: 20px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .footer-hashtag {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+    }
+
+    /* ─── BACK TO TOP ─── */
+    .back-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 99;
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      border-radius: 4px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+    }
+
+    .back-top.show {
+      display: flex;
+    }
+
+    .back-top:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ─── PAGE TRANSITION ─── */
+    .page-transition {
+      animation: pageFadeIn 0.4s ease;
+    }
+
+    @keyframes pageFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         RESPONSIVE — TABLET (≤1100px)
+      ══════════════════════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .hero-cards-wrap {
+        width: 300px;
+        height: 560px;
+      }
+
+      .sport-card {
+        width: 190px;
+        height: 240px;
+        padding: 22px 18px;
+      }
+
+      .sport-card:nth-child(1) {
+        top: 0px;
+        left: 55px;
+      }
+
+      .sport-card:nth-child(2) {
+        top: 65px;
+        left: 8px;
+      }
+
+      .sport-card:nth-child(3) {
+        top: 140px;
+        left: 75px;
+      }
+
+      .sport-card:nth-child(4) {
+        top: 215px;
+        left: 35px;
+      }
+
+      .sport-card:nth-child(5) {
+        top: 290px;
+        left: 90px;
+      }
+
+      .sport-card-title {
+        font-size: 1.4rem;
+      }
+
+      .sport-card-emoji {
+        font-size: 2rem;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         RESPONSIVE — MEDIUM (≤900px)
+      ══════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+
+      /* Hero: stack vertically */
+      .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-bottom: 24px;
+        gap: 32px;
+        min-height: unset;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-cards-wrap {
+        /* On tablet show cards in a row instead of stacked */
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        perspective: none;
+      }
+
+      .sport-card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: calc(50% - 8px);
+        height: auto;
+        min-height: 200px;
+        border-radius: 14px;
+      }
+
+      .sport-card:hover {
+        transform: translateY(-6px) !important;
+        z-index: 2 !important;
+      }
+
+      .hero-stats {
+        padding: 0 5vw 32px;
+        gap: 28px;
+      }
+
+      /* Layout fixes */
+      .about-grid,
+      .poster-inner,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-img-badge {
+        right: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         RESPONSIVE — MOBILE (≤768px)
+      ══════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* FIX: show hamburger, hide desktop links */
+      .nav-links {
+        display: none !important;
+      }
+
+      .hamburger {
+        display: flex !important;
+      }
+
+      nav {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .clubs-section {
+        padding: 60px 0;
+      }
+
+      .clubs-track {
+        padding: 0 20px 12px;
+      }
+
+      .hero-inner {
+        padding: calc(var(--nav-h) + 24px) 20px 20px;
+        gap: 28px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+      }
+
+      .hero-sub {
+        font-size: 0.92rem;
+      }
+
+      .hero-actions {
+        gap: 10px;
+      }
+
+      .hero-actions .btn {
+        padding: 12px 20px;
+        font-size: 0.75rem;
+      }
+
+      /* Cards: 2-col grid on mobile */
+      .hero-cards-wrap {
+        gap: 12px;
+      }
+
+      .sport-card {
+        width: calc(50% - 6px);
+        min-height: 170px;
+        padding: 18px 14px;
+        border-radius: 12px;
+      }
+
+      .sport-card-title {
+        font-size: 1.2rem;
+      }
+
+      .sport-card-emoji {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+      }
+
+      .sport-card-sub {
+        font-size: 0.68rem;
+      }
+
+      .sport-card-badge {
+        font-size: 0.52rem;
+        padding: 3px 8px;
+      }
+
+      .hero-stats {
+        padding: 0 20px 28px;
+        gap: 20px;
+        justify-content: flex-start;
+      }
+
+      .stat-num {
+        font-family: "Bebas Neue", "Segoe UI Symbol", "Arial Unicode MS", sans-serif;
+        font-size: 2.2rem;
+      }
+
+      .form-row,
+      .form-three {
+        grid-template-columns: 1fr;
+      }
+
+      .sport-content {
+        padding: 48px 20px;
+      }
+
+      .sport-content>div[style*="grid-template-columns"] {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .match-row {
+        grid-template-columns: 1fr auto 1fr;
+        padding: 16px;
+        gap: 12px;
+      }
+
+      .match-team-name {
+        font-size: 0.78rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .reg-form-wrap {
+        padding: 32px 20px;
+      }
+
+      .poster-inner {
+        gap: 32px;
+      }
+
+      .back-top {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+         RESPONSIVE — SMALL MOBILE (≤420px)
+      ══════════════════════════════════════════════════════ */
+    @media (max-width: 420px) {
+      .hero-cards-wrap {
+        gap: 10px;
+      }
+
+      .sport-card {
+        width: 100%;
+        min-height: 140px;
+        padding: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-stats {
+        gap: 20px;
+      }
+    }
+
+    /* ─── UTILITY ─── */
+    .text-gold {
+      color: var(--gold);
+    }
+
+    .mt-4 {
+      margin-top: 16px;
+    }
+
+    .mt-8 {
+      margin-top: 32px;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--gold);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+         NAVIGATION
+    ══════════════════════════════════════════════════════ -->
+  <nav id="mainNav">
+    <a class="nav-logo" onclick="showPage('home')" href="#home" aria-label="London Sportif Home">
+      <img
+        src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/LogoLS.png"
+        alt="London Sportif Logo" onerror="this.style.background='#1a0e2e';this.style.borderRadius='50%';" />
+      <div class="nav-logo-text">
+        <span>London</span>
+        <span>Sportif</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')" href="#home" id="nav-home" data-page="home">Home</a></li>
+      <li>
+        <span tabindex="0">About ▾</span>
+        <div class="dropdown">
+          <a onclick="showPage('about')" href="#about" data-page="about">About Us</a>
+          <a onclick="showPage('board')" href="#board" data-page="board">Board of Directors</a>
+        </div>
+      </li>
+      <li>
+        <span tabindex="0">Clubs ▾</span>
+        <div class="dropdown">
+          <a onclick="showPage('football')" href="#football" data-page="football">⚽ Football</a>
+          <a onclick="showPage('cricket')" href="#cricket" data-page="cricket">🏏 Cricket</a>
+          <a onclick="showPage('badminton')" href="#badminton" data-page="badminton">🏸 Badminton</a>
+          <a onclick="showPage('junior')" href="#junior" data-page="junior">🌟 Junior Projects</a>
+          <a onclick="showPage('community')" href="#community" data-page="community">🤝 Community Programme</a>
+        </div>
+      </li>
+      <li><a onclick="showPage('matches')" href="#matches" data-page="matches">Matches</a></li>
+      <li><a onclick="showPage('achievements')" href="#achievements" data-page="achievements">Achievements</a></li>
+      <li><a onclick="showPage('contact')" href="#contact" data-page="contact">Contact</a></li>
+      <li><a href="https://teamshop.nxt-sports.com/find-your-club/london-sportif-cc/" target="_blank"
+          rel="noopener">Shop ↗</a></li>
+      <li><a onclick="showPage('register')" href="#register" class="highlight" data-page="register">Join Us</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a onclick="showPage('home')" href="#home" data-page="home">Home</a>
+    <span
+      style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);padding:8px 0 4px;border-bottom:none;">About</span>
+    <a class="sub" onclick="showPage('about')" href="#about" data-page="about">About Us</a>
+    <a class="sub" onclick="showPage('board')" href="#board" data-page="board">Board of Directors</a>
+    <span
+      style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);padding:8px 0 4px;border-bottom:none;">Clubs</span>
+    <a class="sub" onclick="showPage('football')" href="#football" data-page="football">⚽ Football</a>
+    <a class="sub" onclick="showPage('cricket')" href="#cricket" data-page="cricket">🏏 Cricket</a>
+    <a class="sub" onclick="showPage('badminton')" href="#badminton" data-page="badminton">🏸 Badminton</a>
+    <a class="sub" onclick="showPage('junior')" href="#junior" data-page="junior">🌟 Junior Projects</a>
+    <a class="sub" onclick="showPage('community')" href="#community" data-page="community">🤝 Community Programme</a>
+    <a onclick="showPage('matches')" href="#matches" data-page="matches">Matches &amp; Results</a>
+    <a onclick="showPage('achievements')" href="#achievements" data-page="achievements">Achievements</a>
+    <a onclick="showPage('contact')" href="#contact" data-page="contact">Contact</a>
+    <a href="https://teamshop.nxt-sports.com/find-your-club/london-sportif-cc/" target="_blank" rel="noopener">Shop
+      ↗</a>
+    <a onclick="showPage('register')" href="#register" data-page="register" style="color:var(--purple);font-weight:600;">Join Us</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         HOME PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+
+      <!-- Main flex row: LEFT content + RIGHT cards -->
+      <div class="hero-inner">
+
+        <!-- LEFT -->
+        <div class="hero-content">
+          <div class="hero-tag">East London · Est. 2017 · Charity No. 1212734</div>
+          <h1>London <em>Sportif</em></h1>
+          <p class="hero-sub">
+            Uniting communities through Football, Cricket, Badminton and Junior Sport
+            in the heart of East London. One family. Many champions.
+          </p>
+          <div class="hero-actions">
+            <a onclick="showPage('register')" href="#register" class="btn btn-gold">Join Us →</a>
+            <a onclick="showPage('about')" href="#about" class="btn btn-outline">Our Story</a>
+            <a href="https://teamshop.nxt-sports.com/find-your-club/london-sportif-cc/" target="_blank" rel="noopener"
+              class="btn btn-outline">Shop ↗</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Sport cards (fanned/stacked) -->
+        <div class="hero-cards-wrap">
+
+          <div class="sport-card sport-card-flip sport-card-feature" onclick="goToCommunity()" tabindex="0">
+            <div class="sport-card-flip-inner">
+              <div class="sport-card-face sport-card-front">
+                <span class="sport-card-emoji">🌟</span>
+                <div class="sport-card-title">Community<br>Programmes</div>
+                <div class="sport-card-sub">Outreach &amp; youth development<br>beyond the pitch</div>
+                <div class="sport-card-badge">Discover →</div>
+              </div>
+              <div class="sport-card-face sport-card-back">
+                <div class="sport-card-back-title">Our Impact</div>
+                <p class="sport-card-back-text">From tackling food poverty to empowering girls, women and young
+                  people, our community programmes use sport to build a stronger East London.</p>
+                <div class="sport-card-badge">View All →</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sport-card" onclick="showPage('football')">
+            <span class="sport-card-emoji">⚽</span>
+            <div class="sport-card-title">Football</div>
+            <div class="sport-card-sub">Weekdays &amp; weekends<br>All abilities welcome</div>
+            <div class="sport-card-badge">FA Affiliated</div>
+          </div>
+
+          <div class="sport-card" onclick="showPage('cricket')">
+            <span class="sport-card-emoji">🏏</span>
+            <div class="sport-card-title">Cricket</div>
+            <div class="sport-card-sub">Summer season<br>Middlesex County League</div>
+            <div class="sport-card-badge">ECB Affiliated</div>
+          </div>
+
+          <div class="sport-card" onclick="showPage('badminton')">
+            <span class="sport-card-emoji">🏸</span>
+            <div class="sport-card-title">Badminton</div>
+            <div class="sport-card-sub">Adult sessions<br>Competitive &amp; social</div>
+            <div class="sport-card-badge">BE Affiliated</div>
+          </div>
+
+          <div class="sport-card" onclick="showPage('junior')">
+            <span class="sport-card-emoji">🌟</span>
+            <div class="sport-card-title">Junior Projects</div>
+            <div class="sport-card-sub">Under 18s<br>Youth development</div>
+            <div class="sport-card-badge">Youth Programme</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- STATS — below inner, still inside hero -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Sports Clubs</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2017</div>
+          <div class="stat-label">Founded</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+              <path
+                d="M18.5 8c-1.8 0-3.2 1.2-4.5 2.8C12.7 9.2 11.3 8 9.5 8 6.5 8 5 10.5 5 12s1.5 4 4.5 4c1.8 0 3.2-1.2 4.5-2.8 1.3 1.6 2.7 2.8 4.5 2.8 3 0 4.5-2.5 4.5-4s-1.5-4-4.5-4zm-9 6c-1.7 0-2.5-1.3-2.5-2s.8-2 2.5-2c1.2 0 2.2 1 3.3 2-1.1 1-2.1 2-3.3 2zm9 0c-1.2 0-2.2-1-3.3-2 1.1-1 2.1-2 3.3-2 1.7 0 2.5 1.3 2.5 2s-.8 2-2.5 2z" />
+            </svg>
+          </div>
+          <div class="stat-label">One Family</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLUBS SLIDER -->
+    <section class="clubs-section" aria-label="Our Clubs">
+      <div class="inner">
+        <div class="section-eyebrow">Our Clubs</div>
+        <h2 class="section-title">Choose Your <em>Sport</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="clubs-track">
+
+        <article class="club-card" onclick="showPage('football')">
+          <img class="club-card-img"
+            src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+            alt="London Sportif Football Club">
+          <div class="club-card-body">
+            <div class="club-card-tag">FA Affiliated</div>
+            <h3>Football Club</h3>
+            <p>Competing in local leagues with passion. Open to adults of all abilities. Training weekdays &amp;
+              weekends.</p>
+            <a class="club-card-btn" onclick="showPage('football')" href="#football">View Club →</a>
+          </div>
+        </article>
+
+        <article class="club-card" onclick="showPage('cricket')">
+          <img class="club-card-img"
+            src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg"
+            alt="London Sportif Cricket Club">
+          <div class="club-card-body">
+            <div class="club-card-tag">ECB Affiliated</div>
+            <h3>Cricket Club</h3>
+            <p>Playing in the Middlesex County Cricket League. Summer &amp; indoor sessions. All skill levels welcome.
+            </p>
+            <a class="club-card-btn" onclick="showPage('cricket')" href="#cricket">View Club →</a>
+          </div>
+        </article>
+
+        <article class="club-card" onclick="showPage('badminton')">
+          <img class="club-card-img"
+            src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg"
+            alt="London Sportif Badminton Club">
+          <div class="club-card-body">
+            <div class="club-card-tag">Badminton England Affiliated</div>
+            <h3>Badminton</h3>
+            <p>Regular adult sessions in East London. Competitive and social play for members of all abilities.</p>
+            <a class="club-card-btn" onclick="showPage('badminton')" href="#badminton">View Club →</a>
+          </div>
+        </article>
+
+        <article class="club-card" onclick="showPage('junior')">
+          <img class="club-card-img"
+            src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+            alt="London Sportif Junior Projects Team">
+          <div class="club-card-body">
+            <div class="club-card-tag">Youth Development</div>
+            <h3>Junior Projects</h3>
+            <p>Developing the next generation. Fun, safe and structured sessions for young players in East London.</p>
+            <a class="club-card-btn" onclick="showPage('junior')" href="#junior">View Club →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMUNITY & PROGRAMMES -->
+    <section class="clubs-section" id="community-programmes" aria-label="Community Programmes">
+      <div class="inner">
+        <div class="section-eyebrow">Our Work</div>
+        <h2 class="section-title">Community <em>Programmes</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="track-nav">
+        <button class="track-scroll-btn prev" onclick="scrollTrack('community-track', -1)"
+          aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <div class="clubs-track" id="community-track">
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEvu5sw5DnQoPd53KmcHszPspS6fHiFm6UbA&s" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Programme</div>
+            <h3>Adults Sports</h3>
+            <p>Inclusive sports sessions for adults promoting fitness, teamwork and wellbeing.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img" src="https://ffpeds.com/wp-content/uploads/2023/04/are-sports-good-for-kids.jpg"
+            alt="Londonsportif Children-Sports">
+          <div class="club-card-body">
+            <div class="club-card-tag">Programme</div>
+            <h3>Children Sports</h3>
+            <p>Fun and structured activities designed to develop young athletes.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://img.freepik.com/free-vector/flat-hand-drawn-international-women-s-day-illustration_23-2148863944.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Empowerment</div>
+            <h3>Girls &amp; Women Empowerment</h3>
+            <p>Creating opportunities and confidence through sport for young girls.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img" src="https://miro.medium.com/v2/resize:fit:1400/1*hzmpX1ruHDWZbCRSkDlbag.jpeg"
+            alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Wellbeing</div>
+            <h3>Health &amp; Wellbeing</h3>
+            <p>Encouraging healthy, active lifestyles alongside mental wellbeing support for all ages.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://sapa-usa.org/wp-content/uploads/2024/12/top-10-causes-of-food-insecurity.jpg" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Support</div>
+            <h3>Food Poverty</h3>
+            <p>Helping communities through food distribution and support initiatives.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://thementalhealthcoach.com.au/wp-content/uploads/2023/10/loneliness4-1.png" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Community</div>
+            <h3>Isolation &amp; Loneliness</h3>
+            <p>Bringing people together through social and sporting activities.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://sustainingcommunity.wordpress.com/wp-content/uploads/2011/03/community-engagement-definition-3.png"
+            alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Events</div>
+            <h3>Community Engagement</h3>
+            <p>Events that unite and strengthen the local community.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img" src="https://keyevents.com/wp-content/uploads/2019/01/key-events-share.png" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Events</div>
+            <h3>Key Annual Events</h3>
+            <p>Major yearly events celebrating sports, culture and unity.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmLz0fKxCU5RBy666L6KNUEwvcr1ZBOWp2g&s" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Development</div>
+            <h3>Training &amp; Volunteering</h3>
+            <p>Developing skills through coaching and volunteering programmes.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://www.shutterstock.com/image-illustration/celebrate-your-achievements-symbol-concept-600nw-2573819763.jpg"
+            alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Success</div>
+            <h3>Achievement &amp; Celebration</h3>
+            <p>Recognising milestones and celebrating community success.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbrutTMWqmoMRlxEY7pce9e9DNWFO0KwcI0g&s" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Learning</div>
+            <h3>Workshops</h3>
+            <p>Educational and skill-building workshops for all age groups.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img" src="https://images.wral.com/40685c42-7ae9-4574-ada1-2ffccaff84f2?w=1600&h=900"
+            alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">People</div>
+            <h3>Workforce &amp; Volunteers</h3>
+            <p>Our backbone — dedicated people driving impact in the community.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7aBgFGhrbQUd5MKKAP5KDgDkKpklnaTp7_Q&s" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Safety</div>
+            <h3>Safeguarding</h3>
+            <p>Ensuring a safe, inclusive and protected environment for all.</p>
+          </div>
+        </article>
+        <article class="club-card">
+          <img class="club-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtmFFu5EnH3SuDwp6Ku-8hRcPbjA3XHKPMVA&s" alt="">
+          <div class="club-card-body">
+            <div class="club-card-tag">Safety</div>
+            <h3>Health &amp; Safety</h3>
+            <p>Maintaining the highest standards across all activities.</p>
+          </div>
+        </article>
+      </div>
+        <button class="track-scroll-btn next" onclick="scrollTrack('community-track', 1)"
+          aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- CLUB GALLERY -->
+    <section class="gallery-section" id="gallery" aria-label="Club Gallery">
+      <div class="section-eyebrow">Moments</div>
+      <h2 class="section-title">Club <em>Gallery</em></h2>
+      <div class="section-divider"></div>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img
+            src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+            alt="London Sportif Football Club in action">
+          <div class="gallery-caption">Football</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg"
+            alt="London Sportif Cricket Club match">
+          <div class="gallery-caption">Cricket</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg"
+            alt="London Sportif Badminton Club session">
+          <div class="gallery-caption">Badminton</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+            alt="London Sportif Junior Projects team">
+          <div class="gallery-caption">Junior Projects</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://res.cloudinary.com/dj732u5sl/image/upload/v1777561215/London_Sportif_About-Image_sv94mt.jpg"
+            alt="London Sportif community team">
+          <div class="gallery-caption">Community</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (home) -->
+    <section id="home-about" aria-label="About Us">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img class="about-img"
+            src="https://res.cloudinary.com/dj732u5sl/image/upload/v1777561215/London_Sportif_About-Image_sv94mt.jpg"
+            alt="London Sportif community team">
+          <div class="about-img-badge">Est.<br />2017<br /><small
+              style="font-family:'DM Sans';font-size:0.7rem;font-weight:300;">London Sportif</small></div>
+        </div>
+        <div class="about-text">
+          <div class="section-eyebrow">About London Sportif</div>
+          <h2 class="section-title">More Than a <em>Club</em></h2>
+          <div class="section-divider"></div>
+          <p>London Sportif was established in 2017 in the East End. Our organisation was created with the intention of
+            targeting both the youth and adults through diverse sports activities that build character, community and
+            confidence.</p>
+          <p>We run three thriving sports clubs — Badminton, Cricket and Football — all of which take place regularly on
+            both weekdays and weekends. Alongside adult badminton, we hold dedicated junior sessions to nurture the next
+            generation of athletes.</p>
+          <p>Our vision extends further: to widen our sports community and launch women's sports sessions, ensuring
+            every member of our community has a place in our family.</p>
+          <div class="about-chips">
+            <span class="chip">FA Affiliated</span>
+            <span class="chip">ECB Affiliated</span>
+            <span class="chip">Badminton England</span>
+            <span class="chip">Sport England</span>
+            <span class="chip">Charity No. 1212734</span>
+          </div>
+          <a onclick="showPage('about')" href="#about" class="btn btn-gold" style="margin-top:36px;display:inline-flex;">Full
+            Story →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION POSTER -->
+    <section class="poster-section" aria-label="Player Registration 2025/26">
+      <div class="poster-inner">
+        <div class="poster-text">
+          <span class="season-badge">Season 2025/26</span>
+          <div class="section-eyebrow">Player Registration Open</div>
+          <h2 class="section-title">Join the <em>Family</em></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--muted);margin-bottom:20px;">Registration is now open for the 2025/26 season across all
+            four of our clubs. Whether you're an experienced player or picking up a sport for the first time — there's a
+            place for you here.</p>
+          <p style="color:var(--muted);margin-bottom:36px;">Click the poster or the button below to complete your
+            registration form online.</p>
+          <a href="https://app.plinth.org.uk/schema-form/2GcBdgF4fE9Bu8DELMfX" target="_blank" rel="noopener"
+            class="btn btn-gold">Register Now →</a>
+          <a onclick="showPage('register')" href="#register" class="btn btn-outline" style="margin-left:12px;">View Form</a>
+        </div>
+        <div class="poster-frame">
+          <a href="https://app.plinth.org.uk/schema-form/2GcBdgF4fE9Bu8DELMfX" target="_blank" rel="noopener"
+            aria-label="Click to register for 2025/26 season">
+            <img
+              src="https://static.wixstatic.com/media/d01148_45dd378ea3ba445e9d4f288f4f051187~mv2.png/v1/fill/w_534,h_801,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.png"
+              alt="London Sportif Player Registration Poster 2025/26"
+              style="width:100%;display:block;border-radius:6px;" />
+          </a>
+          <div class="poster-frame-label">Click to Register</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL FEED -->
+    <section class="social-section" aria-label="Social Media Feed">
+      <div class="social-header">
+        <div>
+          <div class="section-eyebrow">Stay Connected</div>
+          <h2 class="section-title">Latest <em>Updates</em></h2>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <span class="social-live-badge">Live Feed</span>
+          <div class="social-tabs">
+            <button class="social-tab active" onclick="setTab(this,'fb')">Facebook</button>
+            <button class="social-tab" onclick="setTab(this,'ig')">Instagram</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-fb">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;max-width:900px;">
+          <div>
+            <p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px;">Follow us on Facebook for match updates,
+              event announcements and club news.</p>
+            <a href="https://www.facebook.com/Londonsportif" target="_blank" rel="noopener" class="btn btn-gold"
+              style="margin-bottom:24px;">Open Facebook Page →</a>
+            <div
+              style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;text-align:center;">
+              <div id="fb-root"></div>
+              <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+              <div class="fb-page" data-href="https://www.facebook.com/Londonsportif" data-tabs="timeline"
+                data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true"></div>
+            </div>
+          </div>
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:28px;">
+            <p
+              style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">
+              Quick Stats</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div style="text-align:center;">
+                <div style="font-family:'Bebas Neue';font-size:2rem;color:var(--gold);">4</div>
+                <div style="font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Sports
+                </div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-family:'Bebas Neue';font-size:2rem;color:var(--gold);">2017</div>
+                <div style="font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Founded
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-ig" style="display:none;">
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:24px;">Follow <a
+            href="https://www.instagram.com/londonsportif" target="_blank" rel="noopener"
+            style="color:var(--gold);">@londonsportif</a> for photos, Reels and stories.</p>
+        <div
+          style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;text-align:center;max-width:500px;">
+          <div style="display:flex;flex-direction:column;gap:20px;align-items:center;">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CeByE3nDG3o/"
+              data-instgrm-version="14" style="background:#fff;border:0;max-width:540px;"></blockquote>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW3w1RViNfn/"
+              data-instgrm-version="14" style="background:#fff;border:0;max-width:540px;"></blockquote>
+          </div>
+          <script async src="https://www.instagram.com/embed.js"></script>
+          <a href="https://www.instagram.com/londonsportif" target="_blank" rel="noopener" class="btn btn-gold"
+            style="margin-top:20px;">View on Instagram →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="partners-section" aria-label="Principal and Official Partners">
+      <div style="margin-bottom:40px;">
+        <div class="section-eyebrow">Principal &amp; Official Partners</div>
+        <h2 class="section-title">Our <em>Partners</em></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="partners-track-wrap">
+        <div class="partners-track">
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_dd59867d461e48a4846f9b48d573c261~mv2.png/v1/fill/w_91,h_129,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202021-01-06%20at%2016_52_58.png"
+            alt="ECB" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_6a27ae767c634fa797cc9e97df8ac73b~mv2.jpg/v1/crop/x_251,y_145,w_872,h_1158/fill/w_99,h_129,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/The-FA-Logo_edited_edited.jpg"
+            alt="The Football Association" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_8cd2084bc23043f4a3f3c42de7dc74b5~mv2.png/v1/crop/x_0,y_61,w_436,h_284/fill/w_169,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RmNQ0R3K_edited.png"
+            alt="Badminton England" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_3eace99fe3864fef8835596f116108af~mv2.png/v1/fill/w_242,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed.png"
+            alt="Middlesex County Cricket League" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_9c19d1f0c8314167bc846cd7bf294d15~mv2.png/v1/fill/w_172,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-sport-england-580x382-1_edited.png"
+            alt="Sport England" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_a92d8a32957a4200b35a40b769476d58~mv2.webp/v1/fill/w_163,h_87,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled-design-6-1024x727_png.webp"
+            alt="Canary Wharf Group" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_ab5d24927abc43bc87091b022142d436~mv2.jpg/v1/fill/w_201,h_136,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/towerhamlets-logo.jpg"
+            alt="Tower Hamlets" />
+          <!-- Duplicate for infinite scroll -->
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_dd59867d461e48a4846f9b48d573c261~mv2.png/v1/fill/w_91,h_129,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202021-01-06%20at%2016_52_58.png"
+            alt="ECB" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_6a27ae767c634fa797cc9e97df8ac73b~mv2.jpg/v1/crop/x_251,y_145,w_872,h_1158/fill/w_99,h_129,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/The-FA-Logo_edited_edited.jpg"
+            alt="FA" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_8cd2084bc23043f4a3f3c42de7dc74b5~mv2.png/v1/crop/x_0,y_61,w_436,h_284/fill/w_169,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RmNQ0R3K_edited.png"
+            alt="Badminton England" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_3eace99fe3864fef8835596f116108af~mv2.png/v1/fill/w_242,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed.png"
+            alt="Middlesex CCL" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_9c19d1f0c8314167bc846cd7bf294d15~mv2.png/v1/fill/w_172,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-sport-england-580x382-1_edited.png"
+            alt="Sport England" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_a92d8a32957a4200b35a40b769476d58~mv2.webp/v1/fill/w_163,h_87,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled-design-6-1024x727_png.webp"
+            alt="Canary Wharf" />
+          <img class="partner-logo"
+            src="https://static.wixstatic.com/media/d01148_ab5d24927abc43bc87091b022142d436~mv2.jpg/v1/fill/w_201,h_136,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/towerhamlets-logo.jpg"
+            alt="Tower Hamlets" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (home) -->
+    <section id="contact-section" aria-label="Contact Us">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-eyebrow">Get In Touch</div>
+          <h2 class="section-title">Contact <em>Us</em></h2>
+          <div class="section-divider"></div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Address</div>Duru House, 101 Commercial Road<br />London E1 1RD
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Email</div><a href="mailto:info@londonsportif.com"
+                style="color:var(--gold);text-decoration:none;">info@londonsportif.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Charity Registration</div>No. 1212734 — England &amp; Wales
+            </div>
+          </div>
+          <div class="contact-social-row">
+            <a href="https://www.facebook.com/Londonsportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="https://www.instagram.com/londonsportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@london.sportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.53V6.77a4.85 4.85 0 01-1.01-.08z"/>
+              </svg></a>
+
+            <a href="https://www.youtube.com/@londonsportif/" target="_blank" rel="noopener"
+              class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="section-eyebrow">Send a Message</div>
+          <h3 style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:0.04em;margin-bottom:32px;">Fill the <em
+              style="color:var(--gold);font-style:normal;">Form</em></h3>
+          <form class="contact-form" onsubmit="submitContact(event)">
+            <div class="form-row">
+              <div class="form-field"><label for="c-name">Full Name *</label><input type="text" id="c-name"
+                  placeholder="Your name" required /></div>
+              <div class="form-field"><label for="c-email">Email Address *</label><input type="email" id="c-email"
+                  placeholder="your@email.com" required /></div>
+            </div>
+            <div class="form-field">
+              <label for="c-sport">Sport / Club</label>
+              <select id="c-sport">
+                <option value="">Select a sport (optional)</option>
+                <option>Football</option>
+                <option>Cricket</option>
+                <option>Badminton</option>
+                <option>Junior Projects</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="c-msg">Message *</label><textarea id="c-msg"
+                placeholder="How can we help you?" required></textarea></div>
+            <button type="submit" class="btn btn-gold" style="align-self:flex-start;">Send Message →</button>
+            <p id="form-thanks" style="display:none;color:var(--gold);font-size:0.85rem;">✓ Thank you! We'll be in touch
+              soon.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+  <!-- ═══════════════════════════════════════════════════
+         ABOUT PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-about" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div class="section-eyebrow">Our Story</div>
+      <h1 class="section-title">About <em>London Sportif</em></h1>
+      <div class="section-divider"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <p style="color:var(--muted);margin-bottom:20px;font-size:1.05rem;">London Sportif was established in 2017 in
+            the East End of London. We were created with a clear mission: to use sport as a vehicle for community
+            cohesion, youth development and social integration.</p>
+          <p style="color:var(--muted);margin-bottom:20px;">Our community reaches across backgrounds, ages and
+            abilities. We have grown from a small local initiative into a multi-sport registered charity — and we are
+            just getting started.</p>
+          <p style="color:var(--muted);margin-bottom:20px;">We operate three sports clubs (Badminton, Cricket and
+            Football), hold junior sessions, and actively participate in local tournaments and leagues.</p>
+          <p style="color:var(--muted);">Our future plans include launching dedicated women's sports sessions and
+            continuing to expand our reach across the city.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div
+            style="background:var(--card);border-radius:8px;aspect-ratio:1;overflow:hidden;border:1px solid var(--border);">
+            <img
+              src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+              alt="London Sportif" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div
+            style="background:var(--card);border-radius:8px;aspect-ratio:1;overflow:hidden;border:1px solid var(--border);">
+            <img
+              src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg"
+              alt="London Sportif" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div
+            style="background:var(--card);border-radius:8px;aspect-ratio:1;overflow:hidden;border:1px solid var(--border);">
+            <img
+              src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg"
+              alt="London Sportif" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div
+            style="background:var(--card);border-radius:8px;aspect-ratio:1;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#1a0e2e,#2a1a4e);">
+            <img
+              src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+              alt="London Sportif" style="width:100%;height:100%;object-fit:cover;" /></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:80px;">
+        <div
+          style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <div style="font-family:'Bebas Neue';font-size:3rem;color:var(--gold);">2017</div>
+          <div style="font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;">Founded
+          </div>
+        </div>
+        <div
+          style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <div style="font-family:'Bebas Neue';font-size:3rem;color:var(--gold);">4</div>
+          <div style="font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;">Sports Clubs
+          </div>
+        </div>
+        <div
+          style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <div style="font-family:'Bebas Neue';font-size:3rem;color:var(--gold);">100+</div>
+          <div style="font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;">Members
+          </div>
+        </div>
+        <div
+          style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <div style="font-family:'Bebas Neue';font-size:2rem;color:var(--gold);">1212734</div>
+          <div style="font-size:0.75rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;">Charity No.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         BOARD OF DIRECTORS
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-board" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div class="section-eyebrow">Leadership</div>
+      <h1 class="section-title">Board of <em>Directors</em></h1>
+      <div class="section-divider"></div>
+      <p style="color:var(--muted);max-width:600px;margin-bottom:60px;">Meet the dedicated individuals who volunteer
+        their time and expertise to lead London Sportif's mission to unite the East London community through sport.</p>
+      <div class="directors-grid">
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Ibrahim%20Khalil.jpeg"
+            alt="Ibrahim Khalil">
+          <div class="director-name">Ibrahim Khalil</div>
+          <div class="director-role">President</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Essa%20Zakir%20Kalil.jpeg"
+            alt="Esa Zakir Kalil">
+          <div class="director-name">Esa Zakir Kalil</div>
+          <div class="director-role">Vice President</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Muhibul%20Alam.jpeg"
+            alt="Muhammad Muhibul Alam">
+          <div class="director-name">Muhammad Muhibul Alam</div>
+          <div class="director-role">Secretary</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Muhammad%20Atikur%20Rahman.jpeg"
+            alt="Mohammad Atikur Rahman">
+          <div class="director-name">Mohammad Atikur Rahman</div>
+          <div class="director-role">Treasurer</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Muhi%20Mikdad.jpeg"
+            alt="Muhi Mikdad">
+          <div class="director-name">Muhi Mikdad</div>
+          <div class="director-role">Club Manager</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Rezaul%20Kabir.jpeg"
+            alt="Rezaul Kabir">
+          <div class="director-name">Rezaul Kabir</div>
+          <div class="director-role">Cricket Coach</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Forhad%20Uddin.jpeg"
+            alt="Forhad Uddin">
+          <div class="director-name">Forhad Uddin</div>
+          <div class="director-role">Event Manager</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Shueb%20Ahmed.jpeg"
+            alt="Shueb Ahmed">
+          <div class="director-name">Shueb Ahmed</div>
+          <div class="director-role">Communication Secretary</div>
+        </div>
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Kalim%20Uddin.jpeg"
+            alt="Kalim Uddin">
+          <div class="director-name">Kalim Uddin</div>
+          <div class="director-role">Sports Development Officer</div>
+        </div>
+
+        <!-- ── NEW DIRECTORS BELOW ── Add each person's photo to the src="" attribute ── -->
+
+        <!-- DOB PHOTO: Replace src with photo URL for Aminur Rahman -->
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Aminur%20Rahman.jpeg"
+            alt="Aminur Rahman"
+            onerror="this.style.background='linear-gradient(135deg,var(--purple),#1a0e2e)';this.removeAttribute('src');">
+          <div class="director-name">Aminur Rahman</div>
+          <div class="director-role">Cricket Manager</div>
+        </div>
+
+        <!-- DOB PHOTO: Replace src with photo URL for  Abul Hayat Islam -->
+        <div class="director-card"><img class="director-avatar"
+            src="https://vtjgjylokfkfcuyqdnba.supabase.co/storage/v1/object/public/DOB/Abul%20Hayat%20Islam.jpeg"
+            alt="Abul Hayat Islam"
+            onerror="this.style.background='linear-gradient(135deg,var(--purple),#1a0e2e)';this.removeAttribute('src');">
+          <div class="director-name">Abul Hayat Islam</div>
+          <div class="director-role">Disciplinary Officer</div>
+        </div>
+
+       
+      </div>
+      <div
+        style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;margin-top:48px;max-width:600px;">
+        <p style="font-size:0.8rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">
+          📝 For Founders &amp; Investors</p>
+        <p style="color:var(--muted);font-size:0.9rem;">London Sportif is a registered charity (No. 1212734). If you
+          wish to discuss funding, sponsorship, or a governance role, please <a onclick="showPage('contact')" href="#contact"
+            style="color:var(--gold);">contact us directly</a>.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         FOOTBALL PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-football" class="page">
+    <div class="sport-hero">
+      <div class="sport-hero-bg football">
+        <img
+          src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+          alt="Football">
+      </div>
+      <div class="sport-hero-content">
+        <span class="chip"
+          style="border-color:var(--gold);color:var(--gold);margin-bottom:16px;display:inline-block;">FA
+          Affiliated</span>
+        <h1>London Sportif<br /><em style="color:var(--gold);">Football Club</em></h1>
+        <p>Competing with passion, playing with unity. Our football club welcomes players of all abilities from across
+          East London.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Register as Player →</a>
+          <a onclick="showPage('matches')" href="#matches" class="btn btn-outline">View Matches</a>
+        </div>
+      </div>
+    </div>
+    <div class="sport-content">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <div class="section-eyebrow">About the Club</div>
+          <h2 class="section-title" style="font-size:2.5rem;">The <em>Beautiful Game</em></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--muted);margin-bottom:16px;">Our football club competes in local East London leagues and
+            participates in community tournaments throughout the season. We train regularly on both weekdays and
+            weekends, welcoming players from all backgrounds and abilities.</p>
+          <p style="color:var(--muted);margin-bottom:16px;">We are affiliated with The Football Association (FA) and
+            follow all FA guidelines for safe and inclusive football. Our coaching staff are DBS-checked and hold
+            relevant FA coaching badges.</p>
+          <p style="color:var(--muted);">Whether you're a seasoned player or just getting into football, come join us.
+            Training sessions are open — just bring your boots.</p>
+          <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:2rem;color:var(--gold);">⚽ Adults</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">Training: Weekdays &amp;
+                Weekends<br />Venue: East London (TBC per session)</p>
+            </div>
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:2rem;color:var(--gold);">FA Affiliated</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">All players are registered under the FA.
+                Matches follow standard FA rules and regulations.</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <p
+            style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+            Club Gallery</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;">
+              <img src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+                alt="Football action" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.8);transition:filter 0.3s;"
+                onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;">
+              <img src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+                alt="Football team" style="width:100%;height:100%;object-fit:cover;object-position:30% 50%;filter:brightness(0.8);transition:filter 0.3s;"
+                onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;">
+              <img src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+                alt="Football match" style="width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:brightness(0.8);transition:filter 0.3s;"
+                onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;">
+              <img src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+                alt="Football celebrate" style="width:100%;height:100%;object-fit:cover;object-position:50% 80%;filter:brightness(0.8);transition:filter 0.3s;"
+                onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+          </div>
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold"
+            style="width:100%;justify-content:center;margin-top:20px;">Join Football Club →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         CRICKET PAGE — FIX: removed inner fixed-height wrapper
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-cricket" class="page">
+    <div class="sport-hero">
+      <div class="sport-hero-bg cricket">
+        <img
+          src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg"
+          alt="Cricket">
+      </div>
+      <div class="sport-hero-content">
+        <span class="chip"
+          style="border-color:var(--gold);color:var(--gold);margin-bottom:16px;display:inline-block;">ECB
+          Affiliated</span>
+        <h1>London Sportif<br /><em style="color:var(--gold);">Cricket Club</em></h1>
+        <p>Playing in the Middlesex County Cricket League. Summer and indoor cricket for all abilities. ECB affiliated
+          and proud.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Register as Player →</a>
+          <a href="https://londonsportifcc.play-cricket.com/home" target="_blank" rel="noopener"
+            class="btn btn-outline">Play-Cricket Profile ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="sport-content">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <div class="section-eyebrow">About the Club</div>
+          <h2 class="section-title" style="font-size:2.5rem;">Bat, Bowl, <em>Belong</em></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--muted);margin-bottom:16px;">London Sportif Cricket Club plays in the Middlesex County
+            Cricket League and is affiliated with the ECB. We field competitive teams during the summer season and run
+            indoor training throughout the winter.</p>
+          <p style="color:var(--muted);margin-bottom:16px;">Our club is built on inclusivity. We welcome players of all
+            skill levels — from beginners to experienced cricketers.</p>
+          <p style="color:var(--muted);">Match results and fixtures are available on our <a
+              href="https://londonsportifcc.play-cricket.com/home" target="_blank" rel="noopener"
+              style="color:var(--gold);">Play-Cricket profile</a>.</p>
+          <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:1.6rem;color:var(--gold);">Summer Season</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">League fixtures, weekend matches, and
+                local tournaments.</p>
+            </div>
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:1.6rem;color:var(--gold);">Indoor Winter</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">Year-round indoor net sessions and skill
+                development.</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <p
+            style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+            Club Gallery</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg" alt="Cricket" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg" alt="Cricket" style="width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg" alt="Cricket" style="width:100%;height:100%;object-fit:cover;object-position:30% 80%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg" alt="Cricket" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+          </div>
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold"
+            style="width:100%;justify-content:center;margin-top:20px;">Join Cricket Club →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         BADMINTON PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-badminton" class="page">
+    <div class="sport-hero">
+      <div class="sport-hero-bg badminton">
+        <img
+          src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg"
+          alt="Badminton">
+      </div>
+      <div class="sport-hero-content">
+        <span class="chip"
+          style="border-color:var(--gold);color:var(--gold);margin-bottom:16px;display:inline-block;">Badminton England
+          Affiliated</span>
+        <h1>London Sportif<br /><em style="color:var(--gold);">Badminton Club</em></h1>
+        <p>Competitive and social badminton for adults in East London. Badminton England affiliated. All abilities
+          welcome.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Register as Player →</a>
+          <a href="https://www.badmintonengland.co.uk" target="_blank" rel="noopener" class="btn btn-outline">Badminton
+            England ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="sport-content">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <div class="section-eyebrow">About the Club</div>
+          <h2 class="section-title" style="font-size:2.5rem;">Smash, Rally, <em>Win</em></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--muted);margin-bottom:16px;">London Sportif Badminton Club runs regular adult sessions
+            across East London. We are affiliated with Badminton England, ensuring all our sessions are run to the
+            highest standards of safety and inclusivity.</p>
+          <p style="color:var(--muted);margin-bottom:16px;">We cater for both competitive players looking for match
+            practice and social players who simply want to enjoy the game. Equipment is available for beginners.</p>
+          <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:1.6rem;color:var(--gold);">Adult Sessions</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">Weekdays and weekends. Competitive and
+                social play.</p>
+            </div>
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;">
+              <div style="font-family:'Bebas Neue';font-size:1.6rem;color:var(--gold);">All Levels</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:8px;">Beginner to advanced — everyone has a
+                place on our courts.</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <p
+            style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+            Club Gallery</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg" alt="Badminton" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg" alt="Badminton" style="width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg" alt="Badminton" style="width:100%;height:100%;object-fit:cover;object-position:20% 70%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+            <div style="border-radius:4px;overflow:hidden;aspect-ratio:1;"><img src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg" alt="Badminton" style="width:100%;height:100%;object-fit:cover;object-position:80% 30%;filter:brightness(0.8);transition:filter 0.3s;" onmouseenter="this.style.filter='brightness(1)'" onmouseleave="this.style.filter='brightness(0.8)'"></div>
+          </div>
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold"
+            style="width:100%;justify-content:center;margin-top:20px;">Join Badminton Club →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         JUNIOR PROJECTS PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-junior" class="page">
+    <div class="sport-hero">
+      <div class="sport-hero-bg junior">
+        <img
+          src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+          alt="Junior Projects">
+      </div>
+      <div class="sport-hero-content">
+        <span class="chip"
+          style="border-color:var(--gold);color:var(--gold);margin-bottom:16px;display:inline-block;">Youth Development
+          Programme</span>
+        <h1>Junior<br /><em style="color:var(--gold);">Badminton Team</em></h1>
+        <p>Nurturing the next generation of champions. Safe, structured, and fun badminton sessions for young players in
+          East London.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Register Junior →</a>
+        </div>
+      </div>
+    </div>
+    <div class="sport-content">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <div class="section-eyebrow">Junior Programme</div>
+          <h2 class="section-title" style="font-size:2.5rem;">Young <em>Champions</em></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--muted);margin-bottom:16px;">Our Junior Badminton Team is dedicated to developing young
+            talent in East London. Our structured sessions combine fun with skill development, helping juniors build
+            confidence on and off the court.</p>
+          <p style="color:var(--muted);margin-bottom:16px;">All coaches are DBS-checked, trained in safeguarding, and
+            hold relevant sports coaching qualifications.</p>
+          <p style="color:var(--muted);">Parents are welcome to watch sessions and get involved in the club community.
+          </p>
+          <div
+            style="margin-top:40px;background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:28px;">
+            <p
+              style="font-size:0.8rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;">
+              🛡️ Safeguarding Commitment</p>
+            <p style="font-size:0.88rem;color:var(--muted);">London Sportif is fully committed to safeguarding the
+              welfare of all young people. All sessions comply with Badminton England and Sport England safeguarding
+              policies.</p>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;">
+          <p
+            style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+            Session Info</p>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="background:var(--deep);border-radius:4px;padding:16px;">
+              <p
+                style="font-size:0.7rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">
+                Age Group</p>
+              <p style="font-size:0.9rem;">Under 18s — all abilities welcome</p>
+            </div>
+            <div style="background:var(--deep);border-radius:4px;padding:16px;">
+              <p
+                style="font-size:0.7rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">
+                Venue</p>
+              <p style="font-size:0.9rem;">East London (contact us for details)</p>
+            </div>
+            <div style="background:var(--deep);border-radius:4px;padding:16px;">
+              <p
+                style="font-size:0.7rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px;">
+                Sessions</p>
+              <p style="font-size:0.9rem;">Weekends — check schedule</p>
+            </div>
+          </div>
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold"
+            style="width:100%;justify-content:center;margin-top:20px;">Register Junior →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         COMMUNITY PROGRAMME PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-community" class="page">
+
+    <!-- HERO -->
+    <div class="sport-hero">
+      <div class="sport-hero-bg" style="background:linear-gradient(160deg,#0d1520 0%,#1a0e2e 100%);">
+        <img
+          src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+          alt="Community Programme">
+      </div>
+      <div class="sport-hero-content">
+        <span class="chip" style="border-color:var(--gold);color:var(--gold);margin-bottom:16px;display:inline-block;">East London · Est. 2017</span>
+        <h1>Community<br /><em style="color:var(--gold);">Programme</em></h1>
+        <p>Using the power of sport to build a stronger, more connected East London community. Football, Badminton, Cricket &amp; Junior sessions — all under one roof.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Join a Programme →</a>
+          <a onclick="showPage('contact')" href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPORTS GRID -->
+    <div class="sport-content">
+      <div class="section-eyebrow">Our Sports</div>
+      <h2 class="section-title">Pick Your <em>Game</em></h2>
+      <div class="section-divider"></div>
+      <p style="color:var(--muted);max-width:640px;margin-bottom:48px;">London Sportif runs four active sport programmes open to the whole community. Each is fully affiliated, coached by qualified staff, and welcomes all abilities.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-bottom:80px;">
+
+        <!-- FOOTBALL -->
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;" onclick="showPage('football')"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="https://static.wixstatic.com/media/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_d3e9f31117604e76aacfb6827fec69be~mv2.jpg"
+              alt="Football" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);transition:transform 0.5s,filter 0.3s;"
+              onmouseenter="this.style.transform='scale(1.07)';this.style.filter='brightness(0.9)'" onmouseleave="this.style.transform='scale(1)';this.style.filter='brightness(0.75)'">
+            <div style="position:absolute;bottom:12px;left:16px;font-size:2rem;">⚽</div>
+          </div>
+          <div style="padding:22px;">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">FA Affiliated</div>
+            <h3 style="font-family:'Bebas Neue';font-size:1.7rem;letter-spacing:0.05em;margin-bottom:8px;">Football</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;margin-bottom:16px;">Adults of all abilities. Training weekdays &amp; weekends. Competing in East London leagues.</p>
+            <a onclick="showPage('football')" href="#football" style="display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- BADMINTON -->
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;" onclick="showPage('badminton')"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="https://static.wixstatic.com/media/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_9cc7fa6f9eb944c9a421ce77acb574be~mv2.jpg"
+              alt="Badminton" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);transition:transform 0.5s,filter 0.3s;"
+              onmouseenter="this.style.transform='scale(1.07)';this.style.filter='brightness(0.9)'" onmouseleave="this.style.transform='scale(1)';this.style.filter='brightness(0.75)'">
+            <div style="position:absolute;bottom:12px;left:16px;font-size:2rem;">🏸</div>
+          </div>
+          <div style="padding:22px;">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Badminton England</div>
+            <h3 style="font-family:'Bebas Neue';font-size:1.7rem;letter-spacing:0.05em;margin-bottom:8px;">Badminton</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;margin-bottom:16px;">Adult sessions, competitive &amp; social. Weekday and weekend courts across East London.</p>
+            <a onclick="showPage('badminton')" href="#badminton" style="display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- CRICKET -->
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;" onclick="showPage('cricket')"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="https://static.wixstatic.com/media/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_2ab9a26056424615b464176608eccff3~mv2.jpg"
+              alt="Cricket" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);transition:transform 0.5s,filter 0.3s;"
+              onmouseenter="this.style.transform='scale(1.07)';this.style.filter='brightness(0.9)'" onmouseleave="this.style.transform='scale(1)';this.style.filter='brightness(0.75)'">
+            <div style="position:absolute;bottom:12px;left:16px;font-size:2rem;">🏏</div>
+          </div>
+          <div style="padding:22px;">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">ECB Affiliated</div>
+            <h3 style="font-family:'Bebas Neue';font-size:1.7rem;letter-spacing:0.05em;margin-bottom:8px;">Cricket</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;margin-bottom:16px;">Middlesex County Cricket League. Summer outdoor and winter indoor net sessions.</p>
+            <a onclick="showPage('cricket')" href="#cricket" style="display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- JUNIORS -->
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;" onclick="showPage('junior')"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="height:180px;overflow:hidden;position:relative;">
+            <img src="https://static.wixstatic.com/media/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg/v1/fill/w_980,h_634,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d01148_edf51bf427194c7ba7ba3eb6c2542ca5~mv2.jpg"
+              alt="Junior Projects" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);transition:transform 0.5s,filter 0.3s;"
+              onmouseenter="this.style.transform='scale(1.07)';this.style.filter='brightness(0.9)'" onmouseleave="this.style.transform='scale(1)';this.style.filter='brightness(0.75)'">
+            <div style="position:absolute;bottom:12px;left:16px;font-size:2rem;">🌟</div>
+          </div>
+          <div style="padding:22px;">
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Youth Development</div>
+            <h3 style="font-family:'Bebas Neue';font-size:1.7rem;letter-spacing:0.05em;margin-bottom:8px;">Juniors</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;margin-bottom:16px;">Under 18s. Safe, structured &amp; fun sessions. DBS-checked coaches, safeguarding compliant.</p>
+            <a onclick="showPage('junior')" href="#junior" style="display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Learn More →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- IMPACT STATS -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:40px;margin-bottom:80px;">
+        <div style="text-align:center;">
+          <div style="font-family:'Bebas Neue';font-size:2.8rem;color:var(--gold);line-height:1;">4</div>
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Sports Clubs</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Bebas Neue';font-size:2.8rem;color:var(--gold);line-height:1;">100+</div>
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Active Members</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Bebas Neue';font-size:2.8rem;color:var(--gold);line-height:1;">2017</div>
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Est. East London</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Bebas Neue';font-size:2.8rem;color:var(--gold);line-height:1;">6+</div>
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Partner Orgs</div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY WORK -->
+      <div class="section-eyebrow">Beyond the Pitch</div>
+      <h2 class="section-title">Our <em>Community Work</em></h2>
+      <div class="section-divider"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:8px;">
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">🥗</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Food Poverty Support</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">Tackling food insecurity in East London through distribution partnerships and community drives.</p>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">👩‍🤝‍👨</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Isolation &amp; Loneliness</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">Creating social connections through sport to combat loneliness in our local community.</p>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">💪</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Girls &amp; Women Empowerment</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">Breaking barriers and creating pathways in sport for women and girls across East London.</p>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">🧠</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Health &amp; Wellbeing</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">Promoting physical and mental wellness through regular, inclusive sporting activities.</p>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">🎓</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Training &amp; Volunteering</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">Developing the next generation of coaches, officials and community leaders.</p>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:border-color 0.3s,transform 0.3s;"
+          onmouseenter="this.style.borderColor='var(--gold)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:2rem;margin-bottom:14px;">🛡️</div>
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px;">Safeguarding</h4>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.6;">All activities are DBS-checked and fully compliant with national safeguarding standards.</p>
+        </div>
+
+      </div>
+
+      <!-- JOIN CTA -->
+      <div style="margin-top:60px;background:linear-gradient(135deg,rgba(107,47,160,0.15) 0%,rgba(201,168,76,0.08) 100%);border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:48px;text-align:center;">
+        <div class="section-eyebrow" style="justify-content:center;display:flex;">Get Involved</div>
+        <h2 class="section-title" style="margin:12px 0;">Be Part of the <em>Family</em></h2>
+        <p style="color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:0.95rem;">Whether you want to play, volunteer, coach or simply support — there's a place for you at London Sportif.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a onclick="showPage('register')" href="#register" class="btn btn-gold">Register Now →</a>
+          <a onclick="showPage('contact')" href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         MATCHES PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-matches" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div class="section-eyebrow">Fixtures &amp; Results</div>
+      <h1 class="section-title">Matches &amp; <em>Events</em></h1>
+      <div class="section-divider"></div>
+      <p style="color:var(--muted);max-width:600px;margin-bottom:48px;">Stay up to date with all London Sportif match
+        results, upcoming fixtures and events across our four clubs. Full cricket results are also available on our <a
+          href="https://londonsportifcc.play-cricket.com/home" target="_blank" rel="noopener"
+          style="color:var(--gold);">Play-Cricket profile</a>.</p>
+      <div style="margin-bottom:48px;">
+        <h3
+          style="font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:0.05em;margin-bottom:20px;color:var(--muted);">
+          ⚽ Football Results</h3>
+        <div class="matches-grid">
+          <div class="match-row">
+            <div class="match-team">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">⚽</div>
+              <div>
+                <div class="match-team-name">London Sportif FC</div>
+                <div class="match-sport-badge badge-football">Football</div>
+              </div>
+            </div>
+            <div class="match-score">
+              <div class="score">2 – 1</div>
+              <div class="date">Apr 2025</div>
+            </div>
+            <div class="match-team right">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏟️</div>
+              <div>
+                <div class="match-team-name">Opposition FC</div>
+              </div>
+            </div>
+          </div>
+          <div class="match-row">
+            <div class="match-team">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">⚽</div>
+              <div>
+                <div class="match-team-name">London Sportif FC</div>
+                <div class="match-sport-badge badge-football">Football</div>
+              </div>
+            </div>
+            <div class="match-score">
+              <div class="score">3 – 0</div>
+              <div class="date">Mar 2025</div>
+            </div>
+            <div class="match-team right">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏟️</div>
+              <div>
+                <div class="match-team-name">Opponents United</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:48px;">
+        <h3
+          style="font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:0.05em;margin-bottom:20px;color:var(--muted);">
+          🏏 Cricket Results</h3>
+        <div class="matches-grid">
+          <div class="match-row">
+            <div class="match-team">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏏</div>
+              <div>
+                <div class="match-team-name">London Sportif CC</div>
+                <div class="match-sport-badge badge-cricket">Cricket</div>
+              </div>
+            </div>
+            <div class="match-score">
+              <div class="score">W</div>
+              <div class="date">Summer 2024</div>
+            </div>
+            <div class="match-team right">
+              <div class="match-team-logo"
+                style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏟️</div>
+              <div>
+                <div class="match-team-name">League Opponents</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;text-align:center;max-width:500px;margin:0 auto;">
+        <p
+          style="color:var(--gold);font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;">
+          📋 Full Match History</p>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:20px;">For complete cricket fixtures and results,
+          visit our official Play-Cricket profile.</p>
+        <a href="https://londonsportifcc.play-cricket.com/home" target="_blank" rel="noopener" class="btn btn-gold">View
+          on Play-Cricket →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         ACHIEVEMENTS PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-achievements" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div class="section-eyebrow">Success &amp; Achievements</div>
+      <h1 class="section-title">Our <em>Honours</em></h1>
+      <div class="section-divider"></div>
+      <p style="color:var(--muted);max-width:600px;margin-bottom:60px;">From local tournaments to charity recognition —
+        London Sportif has achieved significant milestones since our founding in 2017.</p>
+      <div class="achievements-grid">
+        <div class="achievement-card" data-year="2024">
+          <div class="ach-icon">🏆</div>
+          <h4>Tournament Winners</h4>
+          <p>East London community tournament champions.</p>
+        </div>
+        <div class="achievement-card" data-year="2023">
+          <div class="ach-icon">⭐</div>
+          <h4>Community Award</h4>
+          <p>Recognised for outstanding contribution to youth sport in Tower Hamlets.</p>
+        </div>
+        <div class="achievement-card" data-year="2023">
+          <div class="ach-icon">🏏</div>
+          <h4>Cricket League Champions</h4>
+          <p>Middlesex County Cricket League division achievement.</p>
+        </div>
+        <div class="achievement-card" data-year="2022">
+          <div class="ach-icon">🎽</div>
+          <h4>Kit Sponsorship Secured</h4>
+          <p>Secured official kit sponsorship and professional team wear for all clubs.</p>
+        </div>
+        <div class="achievement-card" data-year="2022">
+          <div class="ach-icon">🏸</div>
+          <h4>Badminton Tournament</h4>
+          <p>Podium finish in regional badminton competition.</p>
+        </div>
+        <div class="achievement-card" data-year="2021">
+          <div class="ach-icon">📜</div>
+          <h4>Charity Registration</h4>
+          <p>Officially registered as a charity in England &amp; Wales — No. 1212734.</p>
+        </div>
+        <div class="achievement-card" data-year="2020">
+          <div class="ach-icon">🤝</div>
+          <h4>Sport England Partnership</h4>
+          <p>Became an official Sport England affiliated club, unlocking funding and development resources.</p>
+        </div>
+        <div class="achievement-card" data-year="2019">
+          <div class="ach-icon">👦</div>
+          <h4>Junior Programme Launch</h4>
+          <p>Launched our Junior Projects programme, opening sport to young people across East London.</p>
+        </div>
+        <div class="achievement-card" data-year="2017">
+          <div class="ach-icon">🌱</div>
+          <h4>Club Founded</h4>
+          <p>London Sportif was established in the East End — a community vision turned reality.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         CONTACT PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-contact" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h1 class="section-title">Contact <em>Us</em></h1>
+      <div class="section-divider"></div>
+      <div class="contact-grid" style="margin-top:0;">
+        <div class="contact-info">
+          <h3>Let's <em style="color:var(--gold);">Talk</em></h3>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Address</div>Duru House, 101 Commercial Road<br />London E1 1RD
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Email</div><a href="mailto:info@londonsportif.com"
+                style="color:var(--gold);text-decoration:none;">info@londonsportif.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                width="20" height="20">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg></div>
+            <div class="contact-detail-text">
+              <div class="contact-detail-label">Charity No.</div>1212734 — England &amp; Wales
+            </div>
+          </div>
+          <div class="contact-social-row">
+            <a href="https://www.facebook.com/Londonsportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="https://www.instagram.com/londonsportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@london.sportif" target="_blank" rel="noopener" class="social-btn"
+              aria-label="Tiktok"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+            <a href="https://www.youtube.com/@londonsportif/" target="_blank" rel="noopener"
+              class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="section-eyebrow">Send a Message</div>
+          <h3 style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:0.04em;margin-bottom:32px;">Fill the <em
+              style="color:var(--gold);font-style:normal;">Form</em></h3>
+          <form class="contact-form" onsubmit="submitContact(event)">
+            <div class="form-row">
+              <div class="form-field"><label for="c2-name">Full Name *</label><input type="text" id="c2-name"
+                  placeholder="Your name" required /></div>
+              <div class="form-field"><label for="c2-email">Email Address *</label><input type="email" id="c2-email"
+                  placeholder="your@email.com" required /></div>
+            </div>
+            <div class="form-field">
+              <label for="c2-sport">Sport / Club</label>
+              <select id="c2-sport">
+                <option value="">Select a sport (optional)</option>
+                <option>Football</option>
+                <option>Cricket</option>
+                <option>Badminton</option>
+                <option>Junior Projects</option>
+                <option>General Enquiry</option>
+                <option>Sponsorship / Donation</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="c2-msg">Message *</label><textarea id="c2-msg"
+                placeholder="How can we help?" required></textarea></div>
+            <button type="submit" class="btn btn-gold" style="align-self:flex-start;">Send Message →</button>
+            <p id="form-thanks-2" style="display:none;color:var(--gold);font-size:0.85rem;">✓ Thank you! We'll be in
+              touch soon.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         REGISTRATION PAGE
+    ══════════════════════════════════════════════════════ -->
+  <div id="page-register" class="page">
+    <div style="padding-top:var(--nav-h);"></div>
+    <section style="padding-top:80px;">
+      <div style="text-align:center;margin-bottom:60px;">
+        <span class="season-badge">Season 2025/26</span>
+        <div class="section-eyebrow" style="margin-top:16px;">Player Registration</div>
+        <h1 class="section-title">Join Us <em>Today</em></h1>
+        <div class="section-divider" style="margin:24px auto 0;"></div>
+      </div>
+      <div
+        style="display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start;max-width:1100px;margin:0 auto;">
+        <div style="position:sticky;top:calc(var(--nav-h) + 24px);">
+          <a href="https://app.plinth.org.uk/schema-form/2GcBdgF4fE9Bu8DELMfX" target="_blank" rel="noopener"
+            style="display:block;border-radius:8px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 60px rgba(201,168,76,0.2);transition:transform 0.3s;"
+            onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform='scale(1)'">
+            <img
+              src="https://static.wixstatic.com/media/d01148_45dd378ea3ba445e9d4f288f4f051187~mv2.png/v1/fill/w_534,h_801,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.png"
+              alt="Player Registration Poster 2025/26" style="width:100%;display:block;" />
+          </a>
+          <p style="text-align:center;color:var(--muted);font-size:0.75rem;margin-top:12px;letter-spacing:0.1em;">Click
+            poster to register online</p>
+        </div>
+        <div class="reg-form-wrap" style="margin:0;">
+          <div class="reg-form-title">Registration Form</div>
+          <p class="reg-form-sub">Complete the form below to register as a player for the 2025/26 season. Alternatively,
+            <a href="https://app.plinth.org.uk/schema-form/2GcBdgF4fE9Bu8DELMfX" target="_blank" rel="noopener"
+              style="color:var(--gold);">register online here →</a></p>
+          <form class="reg-form" onsubmit="submitReg(event)">
+            <div class="reg-form-section-title">Personal Details</div>
+            <div class="form-row">
+              <div class="form-field"><label for="r-fname">First Name *</label><input type="text" id="r-fname"
+                  placeholder="First name" required /></div>
+              <div class="form-field"><label for="r-lname">Last Name *</label><input type="text" id="r-lname"
+                  placeholder="Last name" required /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label for="r-dob">Date of Birth *</label><input type="date" id="r-dob"
+                  required /></div>
+              <div class="form-field"><label for="r-gender">Gender *</label><select id="r-gender" required>
+                  <option value="">Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Non-binary</option>
+                  <option>Prefer not to say</option>
+                </select></div>
+            </div>
+            <div class="reg-form-section-title">Contact Information</div>
+            <div class="form-row">
+              <div class="form-field"><label for="r-email">Email Address *</label><input type="email" id="r-email"
+                  placeholder="your@email.com" required /></div>
+              <div class="form-field"><label for="r-phone">Phone Number *</label><input type="tel" id="r-phone"
+                  placeholder="+44 7700 000000" required /></div>
+            </div>
+            <div class="form-field"><label for="r-address">Home Address</label><input type="text" id="r-address"
+                placeholder="Street, City, Postcode" /></div>
+            <div class="reg-form-section-title">Sport Selection</div>
+            <div class="form-field"><label for="r-sport">Which club would you like to join? *</label><select
+                id="r-sport" required>
+                <option value="">Select a club</option>
+                <option>Football</option>
+                <option>Cricket</option>
+                <option>Badminton (Adult)</option>
+                <option>Junior Projects</option>
+              </select></div>
+            <div class="form-field"><label for="r-exp">Experience Level</label><select id="r-exp">
+                <option value="">Select level</option>
+                <option>Beginner — never played before</option>
+                <option>Recreational — play casually</option>
+                <option>Club level — played for a club before</option>
+                <option>Competitive — played at county/regional level</option>
+              </select></div>
+            <div class="reg-form-section-title">Medical &amp; Emergency Contact</div>
+            <div class="form-row">
+              <div class="form-field"><label for="r-ec-name">Emergency Contact Name *</label><input type="text"
+                  id="r-ec-name" placeholder="Full name" required /></div>
+              <div class="form-field"><label for="r-ec-phone">Emergency Contact Phone *</label><input type="tel"
+                  id="r-ec-phone" placeholder="+44 7700 000000" required /></div>
+            </div>
+            <div class="form-field"><label for="r-medical">Any medical conditions we should know about?</label><textarea
+                id="r-medical" style="min-height:80px;" placeholder="Leave blank if none"></textarea></div>
+            <div
+              style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:16px;">
+              <label
+                style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:0.85rem;color:var(--muted);">
+                <input type="checkbox" required style="margin-top:4px;accent-color:var(--gold);" />
+                I agree to the London Sportif code of conduct and confirm the information provided is accurate. I
+                consent to my data being used for club administration purposes in line with GDPR. *
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-gold">Submit Registration →</button>
+              <p style="font-size:0.75rem;color:var(--muted);margin-top:12px;">Or complete the official form at <a
+                  href="https://app.plinth.org.uk/schema-form/2GcBdgF4fE9Bu8DELMfX" target="_blank" rel="noopener"
+                  style="color:var(--gold);">plinth.org.uk →</a></p>
+            </div>
+            <p id="reg-thanks" style="display:none;color:var(--gold);">✓ Thank you for registering! We will be in touch
+              shortly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+         GLOBAL FOOTER
+    ══════════════════════════════════════════════════════ -->
+  <footer id="globalFooter">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img
+          src="https://static.wixstatic.com/media/d01148_05322d11115042fa9678be77dbd0e9cf~mv2.png/v1/fill/w_116,h_116,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/sportif%20logo%202%20copy%20without%20%20%20ribbon.png"
+          alt="London Sportif" onerror="this.style.display='none';" />
+        <p>East London's premier multi-sports community club. Football, Cricket, Badminton and Junior Projects — one
+          family, many champions.</p>
+        <div class="footer-charity">Charity Registration No: <strong style="color:var(--white);">1212734</strong> —
+          England &amp; Wales<br />Duru House, 101 Commercial Road, London E1 1RD<br /><a
+            href="mailto:info@londonsportif.com"
+            style="color:var(--gold);text-decoration:none;">info@londonsportif.com</a></div>
+      </div>
+      <div class="footer-col">
+        <h5>Clubs</h5>
+        <ul>
+          <li><a onclick="showPage('football')" href="#football">⚽ Football</a></li>
+          <li><a onclick="showPage('cricket')" href="#cricket">🏏 Cricket</a></li>
+          <li><a onclick="showPage('badminton')" href="#badminton">🏸 Badminton</a></li>
+          <li><a onclick="showPage('junior')" href="#junior">🌟 Junior Projects</a></li>
+          <li><a onclick="showPage('community')" href="#community">🤝 Community Programme</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a onclick="showPage('about')" href="#about">About Us</a></li>
+          <li><a onclick="showPage('board')" href="#board">Board of Directors</a></li>
+          <li><a onclick="showPage('matches')" href="#matches">Matches &amp; Results</a></li>
+          <li><a onclick="showPage('achievements')" href="#achievements">Achievements</a></li>
+          <li><a href="https://teamshop.nxt-sports.com/find-your-club/london-sportif-cc/" target="_blank"
+              rel="noopener">Shop ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow Us</h5>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://www.facebook.com/Londonsportif" target="_blank" rel="noopener"
+            style="display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;"
+            onmouseenter="this.style.color='var(--gold)'" onmouseleave="this.style.color='var(--muted)'"><svg
+              viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>Facebook</a>
+          <a href="https://www.instagram.com/londonsportif" target="_blank" rel="noopener"
+            style="display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;"
+            onmouseenter="this.style.color='var(--gold)'" onmouseleave="this.style.color='var(--muted)'"><svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>Instagram</a>
+          <a href="https://www.tiktok.com/@london.sportif" target="_blank" rel="noopener noreferrer"
+            style="display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;"
+            onmouseenter="this.style.color='var(--gold)'" onmouseleave="this.style.color='var(--muted)'"><svg
+              viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.53V6.77a4.85 4.85 0 01-1.01-.08z"/>
+            </svg>TikTok</a>
+          <a href="https://www.youtube.com/@londonsportif/" target="_blank" rel="noopener"
+            style="display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;"
+            onmouseenter="this.style.color='var(--gold)'" onmouseleave="this.style.color='var(--muted)'"><svg
+              viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+            </svg>YouTube</a>
+        </div>
+        <a onclick="showPage('register')" href="#register" class="btn btn-gold"
+          style="margin-top:24px;display:inline-flex;">Join Us →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <p class="footer-hashtag">#WeAreOneFamily</p>
+        <p style="margin-top:4px;">All Rights Reserved &copy; London Sportif &mdash; Charity Registration No: 1212734
+          &mdash; England</p>
+      </div>
+      <p>Developed by <a href="https://github.com/ARJ-User" style="color:inherit;text-decoration:none;"><strong
+            style="color:var(--purple);">THE ARJ</strong></a></p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" width="18" height="18">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script>
+    // ─── PAGE ROUTING (dynamic, hash-based, supports deep links + back/forward) ───
+    const VALID_PAGES = ['home', 'about', 'board', 'football', 'cricket', 'badminton', 'junior', 'community', 'matches', 'achievements', 'contact', 'register'];
+
+    const PAGE_TITLES = {
+      home: 'London Sportif – The Centre Of Sports',
+      about: 'About Us – London Sportif',
+      board: 'Board of Directors – London Sportif',
+      football: 'Football Club – London Sportif',
+      cricket: 'Cricket Club – London Sportif',
+      badminton: 'Badminton Club – London Sportif',
+      junior: 'Junior Projects – London Sportif',
+      community: 'Community Programme – London Sportif',
+      matches: 'Matches & Results – London Sportif',
+      achievements: 'Achievements – London Sportif',
+      contact: 'Contact Us – London Sportif',
+      register: 'Player Registration – London Sportif'
+    };
+
+    let isRouting = false; // guards against re-entrant hash updates
+
+    function setActiveNav(id) {
+      document.querySelectorAll('.nav-links a[data-page], .mobile-nav a[data-page]').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === id);
+      });
+    }
+
+    function showPage(id, { updateHistory = true, scroll = true } = {}) {
+      if (!VALID_PAGES.includes(id)) id = 'home';
+
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const page = document.getElementById('page-' + id);
+      if (page) {
+        page.classList.add('active');
+        page.classList.add('page-transition');
+        setTimeout(() => page.classList.remove('page-transition'), 400);
+      }
+
+      if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+      closeMobile();
+      setActiveNav(id);
+
+      if (document.title !== PAGE_TITLES[id]) {
+        document.title = PAGE_TITLES[id] || PAGE_TITLES.home;
+      }
+
+      if (updateHistory && window.location.hash.slice(1) !== id) {
+        isRouting = true;
+        history.pushState({ page: id }, '', '#' + id);
+        // release guard on next tick so popstate from this pushState is ignored
+        setTimeout(() => { isRouting = false; }, 0);
+      }
+    }
+
+    // Respond to browser Back/Forward buttons
+    window.addEventListener('popstate', () => {
+      if (isRouting) return;
+      const id = window.location.hash.slice(1) || 'home';
+      showPage(id, { updateHistory: false });
+    });
+
+    // Deep-link support: load the correct page on first paint / refresh
+    function initRouteFromURL() {
+      const id = window.location.hash.slice(1);
+      if (id && VALID_PAGES.includes(id)) {
+        showPage(id, { updateHistory: false, scroll: false });
+      } else {
+        setActiveNav('home');
+      }
+    }
+    initRouteFromURL();
+
+    // ─── COMMUNITY PROGRAMMES CARD — go to home page, then scroll to section ───
+    function goToCommunity() {
+      showPage('home', { scroll: false });
+      setTimeout(() => {
+        const target = document.getElementById('community-programmes');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    }
+
+    // ─── HORIZONTAL TRACK SCROLL BUTTONS ──────────────
+    function scrollTrack(id, direction) {
+      const track = document.getElementById(id);
+      if (!track) return;
+      const amount = track.clientWidth * 0.8;
+      track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    // ─── MOBILE NAV ───────────────────────────────────
+    function toggleMobile() {
+      const nav = document.getElementById('mobileNav');
+      const btn = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      btn.classList.toggle('open');
+    }
+    function closeMobile() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
+
+    // ─── SCROLL ───────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      const btn = document.getElementById('backTop');
+      if (window.scrollY > 80) {
+        nav.classList.add('scrolled');
+        btn.classList.add('show');
+      } else {
+        nav.classList.remove('scrolled');
+        btn.classList.remove('show');
+      }
+    });
+
+    // ─── SOCIAL TABS ──────────────────────────────────
+    function setTab(el, id) {
+      document.querySelectorAll('.social-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('tab-fb').style.display = id === 'fb' ? 'block' : 'none';
+      document.getElementById('tab-ig').style.display = id === 'ig' ? 'block' : 'none';
+    }
+
+    // ─── FORM SUBMIT (dynamic: validates, shows a sending state, prevents double-submit) ───
+    function handleFormSubmit(form, thanksEl) {
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        if (btn.dataset.sending === 'true') return; // block double submit
+        btn.dataset.sending = 'true';
+        const originalLabel = btn.textContent;
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        btn.style.cursor = 'wait';
+        btn.textContent = 'Sending…';
+
+        // Simulate an async submission so the UI reflects real request/response state
+        setTimeout(() => {
+          if (thanksEl) thanksEl.style.display = 'block';
+          form.reset();
+          btn.textContent = 'Sent ✓';
+          setTimeout(() => {
+            btn.textContent = originalLabel;
+            btn.disabled = false;
+            btn.style.opacity = '';
+            btn.style.cursor = '';
+            btn.dataset.sending = 'false';
+          }, 1800);
+        }, 700);
+      } else if (thanksEl) {
+        thanksEl.style.display = 'block';
+        form.reset();
+      }
+    }
+
+    function submitContact(e) {
+      e.preventDefault();
+      const form = e.target;
+      const thanks = form.querySelector('[id^="form-thanks"]');
+      handleFormSubmit(form, thanks);
+    }
+    function submitReg(e) {
+      e.preventDefault();
+      const form = e.target;
+      const thanks = document.getElementById('reg-thanks');
+      handleFormSubmit(form, thanks);
+    }
+
+    // ─── INTERSECTION OBSERVER (fade in cards) ────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.achievement-card, .director-card, .club-card, .match-row').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
+    });
+
+    // ─── HERO SPORT CARDS — 3D TILT (desktop only) ────
+    // Only apply 3D tilt when cards are in stacked/fanned layout (≥900px)
+    function initCardTilt() {
+      const cards = document.querySelectorAll('.sport-card');
+      const baseRotations = ['-5deg', '-8deg', '3deg', '-4deg', '6deg'];
+
+      cards.forEach((card, idx) => {
+        const base = baseRotations[idx] || '0deg';
+
+        card.addEventListener('mousemove', e => {
+          // Only tilt on desktop (cards are absolutely positioned)
+          if (window.innerWidth < 900) return;
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const px = (x - rect.width / 2) / (rect.width / 2);
+          const py = (y - rect.height / 2) / (rect.height / 2);
+          card.style.transform = `rotate(${base}) rotateX(${py * -10}deg) rotateY(${px * 10}deg) scale(1.06) translateZ(20px)`;
+          card.style.setProperty('--x', (x / rect.width) * 100 + '%');
+          card.style.setProperty('--y', (y / rect.height) * 100 + '%');
+        });
+
+        card.addEventListener('mouseleave', () => {
+          if (window.innerWidth < 900) return;
+          card.style.transform = `rotate(${base}) scale(1) translateZ(0)`;
+          card.style.setProperty('--x', '50%');
+          card.style.setProperty('--y', '50%');
+        });
+      });
+    }
+    initCardTilt();
+  </script>
+</body>
+
+</html>
